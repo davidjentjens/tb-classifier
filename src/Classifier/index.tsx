@@ -11,26 +11,33 @@ import { Container, ImageDropZone, PredictionContainer } from './styles';
 
 const modelUrl = 'https://teachablemachine.withgoogle.com/models/h-1kSM8-L/';
 
+interface ModelPrediction {
+  label: string;
+  confidence: number;
+}
+
 const Classifier: React.FC = () => {
   const [model, setModel] = useState<any>();
 
-  const [selectedImage, setSelectedImage] = useState<string>();
-  const [prediction, setPrediction] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<HTMLImageElement>();
+  const [predictions, setPredictions] = useState<ModelPrediction[]>();
 
   const onDrop = useCallback(
-    async (acceptedFiles: File[]) => {
-      const imageUrl = URL.createObjectURL(acceptedFiles[0]);
-      setSelectedImage(imageUrl);
+    (acceptedFiles: File[]) => {
+      const image = new Image();
+      image.src = URL.createObjectURL(acceptedFiles[0]);
 
-      try {
-        const predictions = await model.classify(imageUrl);
+      setSelectedImage(image);
 
-        console.log(predictions);
-      } catch (err) {
-        console.log((err as any).error);
+      if (!image) {
+        return;
       }
 
-      setPrediction(true);
+      image.onload = async () => {
+        const modelPredictions = await model.classify(image);
+        setPredictions(modelPredictions);
+        console.log(modelPredictions);
+      };
     },
     [model],
   );
@@ -60,15 +67,16 @@ const Classifier: React.FC = () => {
       <ImageDropZone {...getRootProps()}>
         <input {...getInputProps()} />
 
-        {prediction && selectedImage ? (
+        {predictions && selectedImage ? (
           <PredictionContainer>
-            <img src={selectedImage} alt="Imagem selecionada" />
+            <img src={selectedImage.src} alt="Imagem selecionada" />
             <div>
               <p>
-                Previsão: <span>Tuberculose</span>
+                Previsão: <span>{predictions[0].label}</span>
               </p>
               <p>
-                Confiança: <span>98.3%</span>
+                Confiança:{' '}
+                <span>{(predictions[0].confidence * 100).toFixed(2)}%</span>
               </p>
             </div>
           </PredictionContainer>
