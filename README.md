@@ -15,7 +15,7 @@
   <br/><br/>
 </center>
 
-This project presents a React-based Web Application which is able to take in images of X-Rays of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app/](https://tbclassify.netlify.app/).
+This project presents a React-based Web Application which is able to take in images of X-Rays of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app](https://tbclassify.netlify.app).
 
 **DISCLAIMER: This project is not meant to be used for medical purposes. It is for academical purposes only.**
 
@@ -28,7 +28,7 @@ The data for this project comes from the kaggle dataset [Pulmonary Chest X-Ray A
 This project was developed for the purposes handing in an assessment for completing the Computational Vision course at PUC-Rio, under the supervision of professor Marcelo Gattass.
 
 ## Prediction
-The model used for predicting outcomes was trained using the training tool Teachable Machine, developed by Google. The training data was fed into the algorithm, which produced a model that could be loaded by the interface, being able to generate predictions.
+The model used for predicting outcomes was trained using the training tool [Teachable Machine](https://teachablemachine.withgoogle.com), developed by Google. The training data was fed into the algorithm, which produced a model that could be loaded by the interface, being able to generate predictions.
 
 ## Usage
 This project is completely open-source and may be used by anyone for academical or commercial purposes. To run the project, follow these steps:
