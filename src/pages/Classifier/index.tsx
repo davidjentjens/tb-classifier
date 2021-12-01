@@ -67,10 +67,14 @@ const Classifier: React.FC = () => {
 
   return (
     <Container>
-      <h2>⚕️ Detector de Tuberculose 🩺</h2>
+      <h2>⚕️ Tuberculosis Detector 🩺</h2>
       <p>
-        Seja bem-vindo ao detector de tuberculose. Selecione uma imagem de um
-        Raio X e coloque-à no campo abaixo para receber uma classificação.
+        Welcome to the tuberculosis detector web app. Select an X-Ray image and
+        place it in the field below to receive a prediction.
+        <b>
+          DISCLAIMER: This project is not meant to be used for medical purposes.
+          It is for academical purposes only.
+        </b>
       </p>
 
       <ImageDropZone {...getRootProps()}>
@@ -79,22 +83,22 @@ const Classifier: React.FC = () => {
         {modelIsLoading ? (
           <>
             <LoadingContainer loaderSize={72} containerHeight="100px" />
-            <p>O modelo de previsão está carregando, por favor aguarde...</p>
+            <p>The prediction model is loading, please wait...</p>
           </>
         ) : isLoading ? (
           <>
             <LoadingContainer loaderSize={72} containerHeight="100px" />
-            <p>Inferência em andamento, por favor aguarde...</p>
+            <p>Inference in progress, please wait...</p>
           </>
         ) : predictions && selectedImage ? (
           <PredictionContainer>
-            <img src={selectedImage.src} alt="Imagem selecionada" />
+            <img src={selectedImage.src} alt="Selected X-Ray" />
             <div>
               <p>
-                Previsão: <span>{predictions[0].label}</span>
+                Prediction: <span>{predictions[0].label}</span>
               </p>
               <p>
-                Confiança:{' '}
+                Confidence:{' '}
                 <span>{(predictions[0].confidence * 100).toFixed(2)}%</span>
               </p>
             </div>
@@ -102,15 +106,12 @@ const Classifier: React.FC = () => {
         ) : isDragActive ? (
           <>
             <BsImage size={48} />
-            <p>Arraste a imagem aqui ...</p>
+            <p>Drag the image here...</p>
           </>
         ) : (
           <>
             <BsImage size={48} />
-            <p>
-              Arraste e solte o arquivo aqui, ou clique para selecionar o
-              arquivo ...
-            </p>
+            <p>Drag and drop the file here, or click to select the file...</p>
           </>
         )}
       </ImageDropZone>

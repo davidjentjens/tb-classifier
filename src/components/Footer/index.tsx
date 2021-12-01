@@ -9,9 +9,8 @@ const Footer: React.FC = () => {
     <Container>
       <img src={logoPUC} alt="Logo PUC-Rio" />
       <p>
-        Desenvolvido por David M. Jentjens, para fins de trabalho de conclusão
-        da disciplina Visão Computacional da PUC-Rio, com o professor Marcelo
-        Gattass.
+        Developed by David M. Jentjens, for the Computer Vision course at
+        PUC-Rio, under the supervision of professor Marcelo Gattass.
       </p>
     </Container>
   );
