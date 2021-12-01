@@ -6,6 +6,12 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Dense_opacity_of_primary_pulmonary_tuberculosis.jpg" height="128px">
     <img src="https://www.researchgate.net/profile/Ali-Khan-98/publication/47567125/figure/fig25/AS:202500230651943@1425291225792/Primary-Mycobacterium-tuberculosis-Chest-X-ray-shows-right-upper-lobe-and-left-midzone.png" height="128px">
   </div>
+  <br/>
+  <div align="center">
+    <img alt="GitHub" src="https://img.shields.io/github/license/davidjentjens/tb-classifier?style=flat-square">
+    <img alt="Website" src="https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Ftbclassify.netlify.app%2F">
+    <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/davidjentjens/tb-classifier?style=flat-square">
+  </div>
   <br/><br/>
 </center>
 
