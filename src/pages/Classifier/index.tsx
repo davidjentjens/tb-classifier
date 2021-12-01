@@ -32,15 +32,15 @@ const Classifier: React.FC = () => {
         return;
       }
 
-      setSelectedImage(image);
       setIsLoading(true);
+      setSelectedImage(image);
 
       image.onload = async () => {
         const modelPredictions = await model.classify(image);
         setPredictions(modelPredictions);
-      };
 
-      setIsLoading(false);
+        setIsLoading(false);
+      };
     },
     [model],
   );
@@ -56,6 +56,10 @@ const Classifier: React.FC = () => {
     initModel();
   }, []);
 
+  useEffect(() => {
+    console.log(isLoading);
+  }, [isLoading]);
+
   return (
     <Container>
       <h2>⚕️ Detector de Tuberculose 🩺</h2>
@@ -67,7 +71,7 @@ const Classifier: React.FC = () => {
         <input {...getInputProps()} />
 
         {isLoading ? (
-          <LoadingContainer />
+          <LoadingContainer loaderSize={72} />
         ) : predictions && selectedImage ? (
           <PredictionContainer>
             <img src={selectedImage.src} alt="Imagem selecionada" />
