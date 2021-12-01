@@ -1,9 +1,12 @@
 <center>
-<h1>Tuberculosis Classifier</h1>
-<img src="https://prod-images-static.radiopaedia.org/images/16357056/f0383135c7c3c2d55eedefffe9ece8_jumbo.jpeg" height="128px">
-<img src="https://prod-images-static.radiopaedia.org/images/2802824/9097405bba7d96b21f10cb008a9551_jumbo.jpg" height="128px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Dense_opacity_of_primary_pulmonary_tuberculosis.jpg" height="128px">
-<img src="https://www.researchgate.net/profile/Ali-Khan-98/publication/47567125/figure/fig25/AS:202500230651943@1425291225792/Primary-Mycobacterium-tuberculosis-Chest-X-ray-shows-right-upper-lobe-and-left-midzone.png" height="128px">
+  <h1 align="center">Tuberculosis Classifier</h1>
+  <div align="center">
+    <img src="https://prod-images-static.radiopaedia.org/images/16357056/f0383135c7c3c2d55eedefffe9ece8_jumbo.jpeg" height="128px">
+    <img src="https://prod-images-static.radiopaedia.org/images/2802824/9097405bba7d96b21f10cb008a9551_jumbo.jpg" height="128px">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Dense_opacity_of_primary_pulmonary_tuberculosis.jpg" height="128px">
+    <img src="https://www.researchgate.net/profile/Ali-Khan-98/publication/47567125/figure/fig25/AS:202500230651943@1425291225792/Primary-Mycobacterium-tuberculosis-Chest-X-ray-shows-right-upper-lobe-and-left-midzone.png" height="128px">
+  </div>
+  <br/><br/>
 </center>
 
 This project presents a React-based Web Application which is able to take in images of X-Rays of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app/](https://tbclassify.netlify.app/).
