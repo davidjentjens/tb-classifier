@@ -15,7 +15,7 @@
   <br/><br/>
 </center>
 
-This project presents a React-based Web Application which is able to take in images of X-Rays of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app](https://tbclassify.netlify.app).
+This project presents a React-based Web Application which is able to take in X-Ray images of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app](https://tbclassify.netlify.app).
 
 **DISCLAIMER: This project is not meant to be used for medical purposes. It is for academical purposes only.**
 
