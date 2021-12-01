@@ -21,8 +21,8 @@ export const Container = styled.div`
 `;
 
 export const ImageDropZone = styled.div`
-  width: 530px;
-  height: 300px;
+  width: 100vh;
+  height: 47vh;
   margin: 40px;
 
   border-radius: 5px;
