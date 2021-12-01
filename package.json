@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@sashido/teachablemachine-node": "^1.2.2",
     "@tensorflow/tfjs": "^3.11.0",
     "@tensorflow/tfjs-converter": "^3.11.0",
     "@testing-library/jest-dom": "^5.11.4",

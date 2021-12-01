@@ -1,15 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
-import TeachableMachine, {
-  PredictionError,
-} from '@sashido/teachablemachine-node';
 import ml5 from 'ml5';
 
 import { BsImage } from 'react-icons/bs';
 
 import { Container, ImageDropZone, PredictionContainer } from './styles';
-
-const modelUrl = 'https://teachablemachine.withgoogle.com/models/h-1kSM8-L/';
 
 interface ModelPrediction {
   label: string;
@@ -36,7 +33,6 @@ const Classifier: React.FC = () => {
       image.onload = async () => {
         const modelPredictions = await model.classify(image);
         setPredictions(modelPredictions);
-        console.log(modelPredictions);
       };
     },
     [model],
@@ -46,10 +42,6 @@ const Classifier: React.FC = () => {
 
   useEffect(() => {
     const initModel = async (): Promise<void> => {
-      /* const loadedModel = new TeachableMachine({
-        modelUrl: 'https://teachablemachine.withgoogle.com/models/r6BBk-hiN/',
-      }); */
-
       const loadedModel = await ml5.imageClassifier('./model/model.json');
       setModel(loadedModel);
     };
