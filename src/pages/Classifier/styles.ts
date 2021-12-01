@@ -34,6 +34,8 @@ export const ImageDropZone = styled.div`
   color: #fff;
   background: ${darken(0.06, COLORS.secondaryColor)};
 
+  cursor: pointer;
+
   display: flex;
   justify-content: center;
   align-items: center;
