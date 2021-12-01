@@ -6,6 +6,8 @@ import ml5 from 'ml5';
 
 import { BsImage } from 'react-icons/bs';
 
+import LoadingContainer from '../components/LoadingContainer';
+
 import { Container, ImageDropZone, PredictionContainer } from './styles';
 
 interface ModelPrediction {
@@ -16,6 +18,8 @@ interface ModelPrediction {
 const Classifier: React.FC = () => {
   const [model, setModel] = useState<any>();
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const [selectedImage, setSelectedImage] = useState<HTMLImageElement>();
   const [predictions, setPredictions] = useState<ModelPrediction[]>();
 
@@ -24,16 +28,19 @@ const Classifier: React.FC = () => {
       const image = new Image();
       image.src = URL.createObjectURL(acceptedFiles[0]);
 
-      setSelectedImage(image);
-
       if (!image) {
         return;
       }
+
+      setSelectedImage(image);
+      setIsLoading(true);
 
       image.onload = async () => {
         const modelPredictions = await model.classify(image);
         setPredictions(modelPredictions);
       };
+
+      setIsLoading(false);
     },
     [model],
   );
@@ -59,7 +66,9 @@ const Classifier: React.FC = () => {
       <ImageDropZone {...getRootProps()}>
         <input {...getInputProps()} />
 
-        {predictions && selectedImage ? (
+        {isLoading ? (
+          <LoadingContainer />
+        ) : predictions && selectedImage ? (
           <PredictionContainer>
             <img src={selectedImage.src} alt="Imagem selecionada" />
             <div>
