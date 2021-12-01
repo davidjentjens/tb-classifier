@@ -8,7 +8,12 @@ import { BsImage } from 'react-icons/bs';
 
 import LoadingContainer from '../../components/LoadingContainer';
 
-import { Container, ImageDropZone, PredictionContainer } from './styles';
+import {
+  Container,
+  ImageDropZone,
+  PredictionContainer,
+  PredictionInfo,
+} from './styles';
 
 interface ModelPrediction {
   label: string;
@@ -67,7 +72,7 @@ const Classifier: React.FC = () => {
 
   return (
     <Container>
-      <h2>⚕️ Tuberculosis Detector 🩺</h2>
+      <h1>⚕️ Tuberculosis Detector 🩺</h1>
       <p>
         Welcome to the tuberculosis detector web app. Select an X-Ray image and
         place it in the field below to receive a prediction.
@@ -93,7 +98,7 @@ const Classifier: React.FC = () => {
         ) : predictions && selectedImage ? (
           <PredictionContainer>
             <img src={selectedImage.src} alt="Selected X-Ray" />
-            <div>
+            <PredictionInfo>
               <p>
                 Prediction: <span>{predictions[0].label}</span>
               </p>
@@ -101,7 +106,7 @@ const Classifier: React.FC = () => {
                 Confidence:{' '}
                 <span>{(predictions[0].confidence * 100).toFixed(2)}%</span>
               </p>
-            </div>
+            </PredictionInfo>
           </PredictionContainer>
         ) : isDragActive ? (
           <>
