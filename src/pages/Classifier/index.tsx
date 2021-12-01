@@ -6,7 +6,7 @@ import ml5 from 'ml5';
 
 import { BsImage } from 'react-icons/bs';
 
-import LoadingContainer from '../components/LoadingContainer';
+import LoadingContainer from '../../components/LoadingContainer';
 
 import { Container, ImageDropZone, PredictionContainer } from './styles';
 

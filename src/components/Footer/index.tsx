@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logoPUC from '../assets/logoPUC.png';
+import logoPUC from '../../assets/logoPUC.png';
 
 import { Container } from './styles';
 

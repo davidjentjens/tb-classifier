@@ -1,7 +1,7 @@
 import { darken, lighten } from 'polished';
 
 import styled from 'styled-components';
-import COLORS from '../styles/colors';
+import COLORS from '../../styles/colors';
 
 export const Container = styled.div`
   min-height: calc(100vh - 70px);

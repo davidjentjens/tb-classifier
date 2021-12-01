@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
-import COLORS from '../styles/colors';
+import COLORS from '../../styles/colors';
 
 export const Container = styled.footer`
   height: 70px;

@@ -1,8 +1,8 @@
 import React from 'react';
 import GlobalStyle from './styles/global';
 
-import Classifier from './Classifier';
-import Footer from './Footer';
+import Classifier from './pages/Classifier';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
   return (
