@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+<center>
+<h1>Tuberculosis Classifier</h1>
+<img src="https://prod-images-static.radiopaedia.org/images/16357056/f0383135c7c3c2d55eedefffe9ece8_jumbo.jpeg" height="128px">
+<img src="https://prod-images-static.radiopaedia.org/images/2802824/9097405bba7d96b21f10cb008a9551_jumbo.jpg" height="128px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Dense_opacity_of_primary_pulmonary_tuberculosis.jpg" height="128px">
+<img src="https://www.researchgate.net/profile/Ali-Khan-98/publication/47567125/figure/fig25/AS:202500230651943@1425291225792/Primary-Mycobacterium-tuberculosis-Chest-X-ray-shows-right-upper-lobe-and-left-midzone.png" height="128px">
+</center>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project presents a React-based Web Application which is able to take in images of X-Rays of patients lungs, predicting whether or not the lungs are infected with Tuberculosis, with a given confidence score. The Web App is hosted under the following domain: [https://tbclassify.netlify.app/](https://tbclassify.netlify.app/).
 
-## Available Scripts
+**DISCLAIMER: This project is not meant to be used for medical purposes. It is for academical purposes only.**
 
-In the project directory, you can run:
+## Data
 
-### `yarn start`
+The data for this project comes from the kaggle dataset [Pulmonary Chest X-Ray Abnormalities](https://www.kaggle.com/kmader/pulmonary-chest-xray-abnormalities). It is divided into testing and training data on download.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Context
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project was developed for the purposes handing in an assessment for completing the Computational Vision course at PUC-Rio, under the supervision of professor Marcelo Gattass.
 
-### `yarn test`
+## Prediction
+The model used for predicting outcomes was trained using the training tool Teachable Machine, developed by Google. The training data was fed into the algorithm, which produced a model that could be loaded by the interface, being able to generate predictions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
+This project is completely open-source and may be used by anyone for academical or commercial purposes. To run the project, follow these steps:
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Install NodeJS and yarn in your local machine
+2. cd into the project source folder
+3. Run `yarn` in your command prompt, to install the necessary dependencies
+4. Run `yarn start` to run the project in your browser
+5. Enjoy :)
