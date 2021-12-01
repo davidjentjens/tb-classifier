@@ -56,10 +56,6 @@ const Classifier: React.FC = () => {
     initModel();
   }, []);
 
-  useEffect(() => {
-    console.log(isLoading);
-  }, [isLoading]);
-
   return (
     <Container>
       <h2>⚕️ Detector de Tuberculose 🩺</h2>
