@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useCallback, useEffect, useState } from 'react';
+import GithubCorner from 'react-github-corner';
 import { useDropzone } from 'react-dropzone';
 import ml5 from 'ml5';
 
@@ -72,6 +73,7 @@ const Classifier: React.FC = () => {
 
   return (
     <Container>
+      <GithubCorner href="https://github.com/davidjentjens/tb-classifier" />
       <h1>⚕️ Tuberculosis Detector 🩺</h1>
       <p>
         Welcome to the tuberculosis detector web app. Select an X-Ray image and
