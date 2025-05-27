@@ -4,7 +4,6 @@
     <img src="https://prod-images-static.radiopaedia.org/images/16357056/f0383135c7c3c2d55eedefffe9ece8_jumbo.jpeg" height="128px">
     <img src="https://prod-images-static.radiopaedia.org/images/2802824/9097405bba7d96b21f10cb008a9551_jumbo.jpg" height="128px">
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Dense_opacity_of_primary_pulmonary_tuberculosis.jpg" height="128px">
-    <img src="https://www.researchgate.net/profile/Ali-Khan-98/publication/47567125/figure/fig25/AS:202500230651943@1425291225792/Primary-Mycobacterium-tuberculosis-Chest-X-ray-shows-right-upper-lobe-and-left-midzone.png" height="128px">
   </div>
   <br/>
   <div align="center">
